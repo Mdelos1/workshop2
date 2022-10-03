@@ -1,7 +1,45 @@
 //Importar font-size
-@import url(https://fonts.google.com/specimen/Epilogue);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
 
 //variables SASSS
 
+$font-size-body:18px;
+$font-family-body:'Roboto Serif', serif;
+$color1: hsl(0, 0%, 98%);
+$color2: hsl(0, 0%, 41%);
+$color3: hsl(0, 0%, 8%);
 
+@import 'universal';
 
+@function size($t){
+    @return $t*$font-size-body;
+}
+@mixin paddings ($t){
+    padding: $t*10px; 
+}
+@mixin margins_top ($t){
+    margin-top: $t*8px;
+}
+
+.main{
+    background-color: aqua;
+    display: flex;
+    width: 1300px;
+    @include paddings(15);
+    &__left{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        @include margins_top(2)
+        
+    }
+    &__right{
+        display: flex;
+        width:500px;
+    
+    }
+    &__right img{
+        width: 500px;
+    }
+    
+}

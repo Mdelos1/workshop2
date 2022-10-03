@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AACQ","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["style.scss","_universal.scss"],"names":[],"mappings":"AACQ;ACDR;EACI;EACA;EACA;;;ADoBJ;EACI;EACA;EACA;EATA;;AAWA;EACI;EACA;EACA;EAXJ;;AAeA;EACI;EACA;;AAGJ;EACI","file":"style.css"}
