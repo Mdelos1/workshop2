@@ -1,7 +1,12 @@
+
 //importar las font-sizes
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:wght@100&family=Roboto:wght@400;500&family=Rubik&display=swap');
+
+//Importar font-size
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+
 
 
 //Variables SASS
@@ -145,6 +150,13 @@ body {
     display: none;
 }
 
+$font-size-body:18px;
+$font-family-body:'Roboto Serif', serif;
+$color1: hsl(0, 0%, 98%);
+$color2: hsl(0, 0%, 41%);
+$color3: hsl(0, 0%, 8%);
+
+@import 'universal';
 
 
 
@@ -271,3 +283,75 @@ position: relative;
         
     }
 }}
+
+@function size($t){
+    @return $t*$font-size-body;
+}
+@mixin paddings ($t){
+    padding: $t*10px; 
+}
+@mixin margins_top ($t){
+    margin-top: $t*8px;
+}
+@mixin gaps ($t){
+    gap: $t*10px;
+}
+@mixin line-heights ($t){
+    line-height: $t*1px;
+}
+body{
+    font-family: 'Roboto Serif', serif;
+}
+.main{
+    background-color:$color1;
+    display: flex;
+    @include paddings(15);
+    @include gaps(10);
+    &__left{
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        @include margins_top(13);
+        
+    }
+    &__left h1{
+        font-size: size(5);
+        line-height: 80px;
+    }
+    &__left p{
+        font-size: size(1.1);
+        @include margins_top(8);
+        line-height: 30px;
+    }
+    &__left button{
+        @include margins_top(8);
+        width: size(9.8);
+        height: size(2.6);
+        border-radius: size(0.8);
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: size(0.8);
+        background-color: $color3;
+        color: $color1;
+        border: none;
+    }
+    &__left button :hover{
+        background-color: $color1;
+        color: $color3;
+    }
+    &__left img{
+        @include margins_top(8);
+        width: 130px;
+        margin-right: 60px;
+        justify-content: center;
+    }
+    &__right{
+        display: flex;
+    }
+    &__right img{
+        width: 500px;
+    }
+    
+}
+

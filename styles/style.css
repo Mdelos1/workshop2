@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:wght@100&family=Roboto:wght@400;500&family=Rubik&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
+>>>>>>> main
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
 }
 
+<<<<<<< HEAD
 body, .header__item button {
   font-family: "Roboto";
   font-size: 17px;
@@ -184,6 +189,61 @@ body, .header__item button {
   .botonRegister:hover {
     color: hsl(0deg, 0%, 0%);
   }
+=======
+body {
+  font-family: "Roboto Serif", serif;
+}
+
+.main {
+  background-color: hsl(0deg, 0%, 98%);
+  display: flex;
+  padding: 150px;
+  gap: 100px;
+}
+.main__left {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 104px;
+}
+.main__left h1 {
+  font-size: 90px;
+  line-height: 80px;
+}
+.main__left p {
+  font-size: 19.8px;
+  margin-top: 64px;
+  line-height: 30px;
+}
+.main__left button {
+  margin-top: 64px;
+  width: 176.4px;
+  height: 46.8px;
+  border-radius: 14.4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 14.4px;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  border: none;
+}
+.main__left button :hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+}
+.main__left img {
+  margin-top: 64px;
+  width: 130px;
+  margin-right: 60px;
+  justify-content: center;
+}
+.main__right {
+  display: flex;
+}
+.main__right img {
+  width: 500px;
+>>>>>>> main
 }
 
 /*# sourceMappingURL=style.css.map */
