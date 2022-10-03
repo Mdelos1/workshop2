@@ -1,17 +1,17 @@
-<<<<<<< HEAD
+
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:wght@100&family=Roboto:wght@400;500&family=Rubik&display=swap");
-=======
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
->>>>>>> main
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
 }
 
-<<<<<<< HEAD
+
 body, .header__item button {
   font-family: "Roboto";
   font-size: 17px;
@@ -189,10 +189,8 @@ body, .header__item button {
   .botonRegister:hover {
     color: hsl(0deg, 0%, 0%);
   }
-=======
-body {
-  font-family: "Roboto Serif", serif;
-}
+
+
 
 .main {
   background-color: hsl(0deg, 0%, 98%);
@@ -243,7 +241,7 @@ body {
 }
 .main__right img {
   width: 500px;
->>>>>>> main
-}
 
+}
+}
 /*# sourceMappingURL=style.css.map */
