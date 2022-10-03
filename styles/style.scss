@@ -22,23 +22,59 @@ $color3: hsl(0, 0%, 8%);
 }
 @mixin gaps ($t){
     gap: $t*10px;
-    
+}
+@mixin line-heights ($t){
+    line-height: $t*1px;
+}
+body{
+    font-family: 'Roboto Serif', serif;
 }
 .main{
-    background-color: aqua;
+    background-color:$color1;
     display: flex;
     @include paddings(15);
-    @include gaps(2);
+    @include gaps(10);
     &__left{
         display: flex;
         flex-direction: column;
         width: 800px;
-        @include margins_top(15);
+        @include margins_top(13);
         
+    }
+    &__left h1{
+        font-size: size(5);
+        line-height: 80px;
+    }
+    &__left p{
+        font-size: size(1.1);
+        @include margins_top(8);
+        line-height: 30px;
+    }
+    &__left button{
+        @include margins_top(8);
+        width: size(9.8);
+        height: size(2.6);
+        border-radius: size(0.8);
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: size(0.8);
+        background-color: $color3;
+        color: $color1;
+        border: none;
+    }
+    &__left button :hover{
+        background-color: $color1;
+        color: $color3;
+    }
+    &__left img{
+        @include margins_top(8);
+        width: 130px;
+        margin-right: 60px;
+        justify-content: center;
     }
     &__right{
         display: flex;
-    
     }
     &__right img{
         width: 500px;
