@@ -20,22 +20,24 @@ $color3: hsl(0, 0%, 8%);
 @mixin margins_top ($t){
     margin-top: $t*8px;
 }
-
+@mixin gaps ($t){
+    gap: $t*10px;
+    
+}
 .main{
     background-color: aqua;
     display: flex;
-    width: 1300px;
     @include paddings(15);
+    @include gaps(2);
     &__left{
         display: flex;
         flex-direction: column;
-        width: 60%;
-        @include margins_top(2)
+        width: 800px;
+        @include margins_top(15);
         
     }
     &__right{
         display: flex;
-        width:500px;
     
     }
     &__right img{
