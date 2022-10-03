@@ -34,6 +34,9 @@ body{
     display: flex;
     @include paddings(15);
     @include gaps(10);
+    .img_mobile{
+        display: none;
+    }
     &__left{
         display: flex;
         flex-direction: column;
@@ -80,4 +83,51 @@ body{
         width: 500px;
     }
     
+}
+
+@media screen and (max-width: 375px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .img_mobile{
+            display: flex;
+            width: 275px;
+        }
+        &__left{
+            position: absolute;
+            top: 140px;
+        }
+        &__left h1{
+            display: flex;
+            flex-direction: row;
+            font-size: size(1.7);
+            font-weight: bold;
+        }
+        &__left h1 br{
+            display: none;
+        }
+        &__left p{
+            display: flex;
+            text-align: center;
+            font-size: size(0.6);
+            @include margins_top(1);
+            line-height: 20px;
+            font-weight: bolder;
+            color: $color2;
+
+        }
+        
+        &__left img{
+            display: none;
+        }
+        &__left button{
+            @include margins_top(2);
+            margin-left: 50px;
+        }
+
+        &__right img{
+            display: none;
+        }
+    }
 }
