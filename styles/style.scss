@@ -84,6 +84,7 @@ body {
 .header {
     color: $color-header;
 font-family: $font-headings;
+max-width: 1910px;
     &__nav {
         display: flex;
         justify-content: space-between;
@@ -143,6 +144,7 @@ font-family: $font-headings;
             box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
             color: $color-links;
             background-color: #fff;
+            z-index: 3;
         
     }
     &__main2{
@@ -154,6 +156,9 @@ font-family: $font-headings;
         padding: 10px 20px;
         box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
         color: $color-links;
+        background-color: #fff;
+
+        z-index: 3;
     }
     &__img{
         margin-right: 10px;
@@ -241,7 +246,7 @@ font-family: $font-headings;
 
 
 // Emplear media queries para diseño responsive
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .header {
       &__nav{
         padding-top: 10px;
@@ -287,6 +292,7 @@ font-family: $font-headings;
         width: 100%;
         height: 100%;
         background-color: rgba(21, 22, 22, 0.627);
+        z-index: 3;
     }
     
     .container{
@@ -300,6 +306,8 @@ font-family: $font-headings;
             height: 100%;
             background-color: rgb(255, 255, 255);
             right: 0px;
+        z-index: 3;
+           
            
         }
         &__close{
@@ -365,11 +373,7 @@ position: relative;
         color: $color-btns;
         
     }
-}}
-
-
-
-@media screen and (max-width: 1000px) {
+}
     body{
 padding: 0;
     }
@@ -390,14 +394,15 @@ padding: 0;
             position: relative;
           text-align: center;
          top: -200px;
-         width: 47vw;
-         margin-left: 30%;
-         margin-right: 30%;
+         width: 80%;
+         margin-left: 10%;
+         margin-right: 10%;
          
   
         
         }
         &__left h1{
+            justify-content: center;
             display: flex;
             flex-direction: row;
             font-size: 5vw;
@@ -408,7 +413,8 @@ padding: 0;
             
         }
         &__left p{
-            display: flex;
+            
+            justify-content: center;
             
          font-size: 18px;;
             @include margins_top(0.5);
@@ -421,8 +427,8 @@ padding: 0;
         &__imgFooter{
             position: absolute;
             top: 260px;
-            left: -35%;
-        width: 100vw;
+            width: 100%;
+           margin: auto;
             display: flex;
             flex-direction: row
         }
@@ -434,8 +440,10 @@ padding: 0;
             height: 3.2vh
         }
         &__left button{
+           margin: auto;
             @include margins_top(2);
-            margin-left: 10vw;
+            justify-content: center;
+            
             &:hover {
         
                 color: rgb(5, 5, 5);

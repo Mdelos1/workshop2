@@ -16,6 +16,7 @@ body, .header__item button {
 .header {
   color: white;
   font-family: "Roboto", sans-serif;
+  max-width: 1910px;
 }
 .header__nav {
   display: flex;
@@ -71,6 +72,7 @@ body, .header__item button {
   box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
   color: hsl(273deg, 4%, 51%);
   background-color: #fff;
+  z-index: 3;
 }
 .hover__main2 {
   top: 70px;
@@ -81,6 +83,8 @@ body, .header__item button {
   padding: 10px 20px;
   box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
   color: hsl(273deg, 4%, 51%);
+  background-color: #fff;
+  z-index: 3;
 }
 .hover__img {
   margin-right: 10px;
@@ -155,7 +159,7 @@ body, .header__item button {
   width: 500px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .header__nav {
     padding-top: 10px;
     padding-left: 10px;
@@ -193,6 +197,7 @@ body, .header__item button {
     width: 100%;
     height: 100%;
     background-color: rgba(21, 22, 22, 0.627);
+    z-index: 3;
   }
   .container__menu {
     position: absolute;
@@ -203,6 +208,7 @@ body, .header__item button {
     height: 100%;
     background-color: rgb(255, 255, 255);
     right: 0px;
+    z-index: 3;
   }
   .container__close {
     position: relative;
@@ -248,8 +254,6 @@ body, .header__item button {
   .botonRegister:hover {
     color: hsl(0deg, 0%, 0%);
   }
-}
-@media screen and (max-width: 1000px) {
   body, .header__item button {
     padding: 0;
   }
@@ -268,11 +272,12 @@ body, .header__item button {
     position: relative;
     text-align: center;
     top: -200px;
-    width: 47vw;
-    margin-left: 30%;
-    margin-right: 30%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .main__left h1 {
+    justify-content: center;
     display: flex;
     flex-direction: row;
     font-size: 5vw;
@@ -282,7 +287,7 @@ body, .header__item button {
     display: none;
   }
   .main__left p {
-    display: flex;
+    justify-content: center;
     font-size: 18px;
     margin-top: 4px;
     line-height: 25px;
@@ -291,8 +296,8 @@ body, .header__item button {
   .main__imgFooter {
     position: absolute;
     top: 260px;
-    left: -35%;
-    width: 100vw;
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: row;
   }
@@ -304,8 +309,9 @@ body, .header__item button {
     height: 3.2vh;
   }
   .main__left button {
+    margin: auto;
     margin-top: 16px;
-    margin-left: 10vw;
+    justify-content: center;
   }
   .main__left button:hover {
     color: rgb(5, 5, 5);
