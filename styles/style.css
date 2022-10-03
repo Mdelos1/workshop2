@@ -1,3 +1,189 @@
-@import url(https://fonts.google.com/specimen/Epilogue);
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:wght@100&family=Roboto:wght@400;500&family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body, .header__item button {
+  font-family: "Roboto";
+  font-size: 17px;
+}
+
+.header {
+  color: white;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: white;
+}
+.header__list {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 51px;
+}
+.header__hidden {
+  display: none;
+}
+.header__item a {
+  text-decoration: none;
+  color: hsl(273deg, 4%, 51%);
+  font-weight: 2300;
+}
+.header__item a:hover {
+  color: hsl(0deg, 0%, 0%);
+}
+.header__item button {
+  padding: 5px 20px;
+  color: hsl(273deg, 4%, 51%);
+  font-weight: 200;
+  border-radius: 20px;
+  padding-bottom: 7px;
+  background-color: hsl(0deg, 0%, 98%);
+  border: 3px solid hsl(273deg, 4%, 51%);
+  cursor: pointer;
+}
+.header__item button:hover {
+  color: hsl(0deg, 0%, 0%);
+  border: 3px solid hsl(0deg, 0%, 0%);
+}
+.header__item--mobile {
+  display: none;
+}
+
+.hover__main {
+  top: 70px;
+  left: 150px;
+  position: absolute;
+  width: 130px;
+  height: max-content;
+  padding: 10px 20px;
+  box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
+  color: hsl(273deg, 4%, 51%);
+}
+.hover__main2 {
+  top: 70px;
+  left: 350px;
+  position: absolute;
+  width: 100px;
+  height: max-content;
+  padding: 10px 20px;
+  box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
+  color: hsl(273deg, 4%, 51%);
+}
+.hover__img {
+  margin-right: 10px;
+}
+.hover__itemDesplegable {
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header__item {
+    display: none;
+  }
+  .header__item--mobile {
+    display: block;
+  }
+  .header__banner {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .header__img-banner {
+    width: 100%;
+  }
+  .header__img-banner img {
+    transform: none;
+  }
+  .header__text {
+    width: 80%;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .header__text hr {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .bacgraund {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 22, 22, 0.627);
+  }
+  .container__menu {
+    position: absolute;
+    top: -1px;
+    width: 40%;
+    padding-right: 5%;
+    padding-left: 2%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    right: 0px;
+  }
+  .container__close {
+    position: relative;
+    top: 10px;
+    left: 100%;
+    width: 26px;
+    z-index: 2;
+  }
+  .container__lista {
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+    color: hsl(273deg, 4%, 51%);
+    list-style: none;
+  }
+  .container__item {
+    margin-top: 20px;
+    text-decoration: none;
+    color: hsl(273deg, 4%, 51%);
+    font-weight: 2300;
+    cursor: pointer;
+  }
+  .container__item:hover {
+    color: hsl(0deg, 0%, 0%);
+  }
+  .container__lista2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 20px;
+    color: hsl(273deg, 4%, 51%);
+    list-style: none;
+  }
+  .botonRegister {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: hsl(273deg, 4%, 51%);
+    background-color: #fff;
+    font-weight: 500;
+  }
+  .botonRegister:hover {
+    color: hsl(0deg, 0%, 0%);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,273 @@
-//Importar font-size
-@import url(https://fonts.google.com/specimen/Epilogue);
+//importar las font-sizes
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:wght@100&family=Roboto:wght@400;500&family=Rubik&display=swap');
 
-//variables SASSS
+
+//Variables SASS
+$font-headings: 'Roboto', sans-serif;
+$font-body: 'Roboto';
+$background-color-nav: hsl(0, 0%, 98%);
+$font-size-body: 17px;
+$color-links: hsl(273, 4%, 51%);
+$color-btn: hsl(273, 4%, 51%);
+$color-btns: hsl(0, 0%, 0%);
+$back-banner: hsl(256, 26%, 20%);
+$color-header: white;
+
+//Declaración de funciones
+@function size($t) {
+    @return $t*$font-size-body;
+}
+
+//importar partials o modules
+@import 'universals';
+
+//mixins: mezclas de propiedades reusables
+@mixin paddings ($t) {
+    padding: $t*1px $t*4px;
+}
+
+@mixin botones($s, $color-letters, $color-backg) {
+    @include paddings($s);
+    color: $color-letters;
+    @extend body;
+    font-weight: 200;
+    border-radius: 20px;
+    padding-bottom: 7px;
+    background-color: $color-backg;
+    border: 3px solid $color-letters;
+    cursor: pointer;
+
+    &:hover {
+        
+        color: $color-btns;
+        border: 3px solid $color-btns;
+    }
+
+}
+
+//Asignación de propiedades al body
+body {
+    font-family: $font-body;
+    font-size: $font-size-body;
+}
+
+//reglas anidadas
+.header {
+    color: $color-header;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include paddings(20);
+        background-color: $color-header;
+    }
+
+    &__list {
+        list-style: none;
+
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: size(3);
+    }
+    &__hidden{
+      
+            display: none;
+        
+    }
+
+
+    &__item {
+        a {
+            text-decoration: none;
+            color: $color-links;
+            font-weight: 2300;
+
+            &:hover {
+                color: $color-btns;
+            }
+        }
+
+        button {
+            @include botones(5, $color-btn, $background-color-nav);
+        }
+
+        &--mobile {
+            display: none;
+        }
+    }
+
+}
+.hover{
+    &__main{
+        
+   
+            top: 70px;
+            left: 150px;
+            position: absolute;
+            width: 130px;
+            height: max-content;
+            padding: 10px 20px;
+            box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
+            color: $color-links;
+        
+    }
+    &__main2{
+        top: 70px;
+        left: 350px;
+        position: absolute;
+        width: 100px;
+        height: max-content;
+        padding: 10px 20px;
+        box-shadow: 2px 3px 20px 0px rgba(209, 209, 209, 0.75);
+        color: $color-links;
+    }
+    &__img{
+        margin-right: 10px;
+    }
+    &__itemDesplegable{
+        margin-top: 12px;
+        margin-left: 20px;
+        margin-top: 10px;
+        
+    }
+  
+
+}
+.hidden{
+    display: none;
+}
+.container{
+    display: none;
+}
 
 
 
+
+
+
+//Emplear media queries para diseño responsive
+@media screen and (max-width: 900px) {
+    .header {
+        &__item {
+            display: none;
+
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__banner {
+            flex-direction: column-reverse;
+            padding: 0;
+        }
+
+        &__img-banner {
+            width: 100%;
+
+            img {
+                transform: none;
+            }
+        }
+
+        &__text {
+            width: 80%;
+            text-align: center;
+            margin: 40px 0;
+            hr{
+                display: none;
+            }
+            
+        }
+    }
+    .menu{
+        display: block;
+    }
+    .bacgraund{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21, 22, 22, 0.627);
+    }
+    
+    .container{
+        
+        &__menu{
+            position: absolute;
+            top: -1px;
+            width: 40%;
+            padding-right: 5%;
+            padding-left: 2%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            right: 0px;
+           
+        }
+        &__close{
+            position: relative;
+            
+     top: 10px;
+        left: 100%;
+            width: 26px;
+            z-index: 2;
+      
+
+        }
+       
+        &__lista{
+           
+            position: relative;
+        
+            left: 40px;
+            font-size: 20px;
+            color:$color-links;
+            list-style: none;
+        
+        }
+       
+    &__item {
+       
+            margin-top: 20px;
+            text-decoration: none;
+            color: $color-links;
+            font-weight: 2300;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-btns;
+                
+            }
+        
+
+    
+
+}
+      
+    }
+    .container__lista2{
+        text-align: center;
+        margin-top: 100px;
+        
+        font-size: 20px;
+        color:$color-links;
+        list-style: none;
+}
+.botonRegister{
+position: relative;
+
+    width: 100%;
+    padding:  10px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: $color-btn;
+    background-color: #fff;
+    font-weight: 500;
+    &:hover {
+        color: $color-btns;
+        
+    }
+}}
